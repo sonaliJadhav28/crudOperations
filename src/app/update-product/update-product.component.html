@@ -1,0 +1,23 @@
+<div class="row">
+    <a routerLink="/">
+        < Back</a>
+            <div class="col-md-12">
+                <h2>Add New Product</h2>
+            </div>
+</div>
+<div class="card">
+    <div class="card-header">Add New Product</div>
+    <div class="card-block">
+        <form id="formUpdateProduct" name="formUpdateProduct" #productData="ngForm" (ngSubmit)="updateProduct(productData.value)">
+            <div class="form-group">
+                <label for="name">Product Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="name" [(ngModel)]="data.name" ngModel>
+            </div>
+            <div class="form-group">
+                <label for="color">Color</label>
+                <input type="text" id="color" name="color" class="form-control" placeholder="Product Color" [(ngModel)]="data.color" ngModel>
+            </div>
+            <input type="submit" class="btn btn-primary btn-block" value="Update Product">
+        </form>
+    </div>
+</div>
